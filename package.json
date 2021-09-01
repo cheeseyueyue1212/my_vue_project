@@ -7,7 +7,9 @@
     "serve": "vite preview",
     "prepare": "husky install",
     "lint": "eslint --ext .tsx,.ts,.js --fix ./src",
-    "fix": "prettier --write  ./src"
+    "fix": "prettier --write  ./src",
+    "lint:lint-staged": "lint-staged -c ./.husky/lintstagedrc.js",
+    "eslint": "eslint \"{src,types}/**/*.{vue,ts,tsx,d.ts}\" --fix"
   },
   "husky": {
     "hooks": {

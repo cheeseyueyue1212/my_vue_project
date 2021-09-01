@@ -15,7 +15,7 @@
     }
   },
   "lint-staged": {
-    "*{.ts,.js}":[
+    "*{.ts,.js}": [
       "eslint --ext .tsx,.ts --fix ./src",
       "prettier --write",
       "git add"
@@ -32,6 +32,7 @@
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
+    "@types/lodash": "^4.14.172",
     "@types/node": "^16.7.6",
     "@typescript-eslint/eslint-plugin": "^4.29.3",
     "@typescript-eslint/parser": "^4.29.3",

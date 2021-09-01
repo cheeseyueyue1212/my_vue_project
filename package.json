@@ -8,20 +8,7 @@
     "prepare": "husky install",
     "lint": "eslint --ext .tsx,.ts,.js --fix ./src",
     "fix": "prettier --write  ./src",
-    "lint:lint-staged": "lint-staged -c ./.husky/lintstagedrc.js",
-    "eslint": "eslint \"{src,types}/**/*.{vue,ts,tsx,d.ts}\" --fix"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*{.ts,.js}": [
-      "eslint --ext .tsx,.ts --fix ./src",
-      "prettier --write",
-      "git add"
-    ]
+    "lint:lint-staged": "lint-staged -c ./.husky/lintstagedrc.js"
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -51,6 +38,8 @@
     "prettier": "^2.3.2",
     "typescript": "^4.3.2",
     "vite": "^2.5.1",
-    "vue-tsc": "^0.2.2"
+    "vue-tsc": "^0.2.2",
+    "eslint-define-config": "^1.0.8",
+    "@tencent/stylelint-config-tencent": "^1.0.7"
   }
 }

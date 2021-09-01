@@ -9,7 +9,7 @@ export default defineComponent({
   name: 'SelectionAttr',
   components: {},
   setup() {
-    1111111const state = reactive<{}>({})
+    111111111const state = reactive<{}>({})
 
     nextTick(() => {
       console.log('nextTick func')

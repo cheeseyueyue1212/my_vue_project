@@ -11,7 +11,7 @@ export default defineComponent({
   setup() {
     const state = reactive<{}>({})
 
-    nextTick(12() => {
+    nextTick(111() => {
       console.log('nextTick func')
     })
 

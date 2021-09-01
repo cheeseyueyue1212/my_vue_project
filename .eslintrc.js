@@ -1,14 +1,13 @@
+// eslintrc.js
 module.exports = {
+  parser: '@typescript-eslint/parser',
+  extends: ['plugin:@typescript-eslint/recommended'],
+  plugins: ['@typescript-eslint'],
   env: {
     browser: true,
-    es2021: true
+    es6: true
   },
-  extends: ['plugin:vue/essential', 'airbnb-base', 'plugin:prettier/recommended'],
-  parserOptions: {
-    ecmaVersion: 12,
-    parser: '@typescript-eslint/parser',
-    sourceType: 'module'
-  },
-  plugins: ['vue', '@typescript-eslint'],
-  rules: {}
+  rules: {
+    semi: ['error', 'never'] // 禁止使用分号
+  }
 }

@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import styleImport from 'vite-plugin-style-import'
 import path from 'path'
 
 // 1. defineConfig: 不用 jsdoc 注解也可以获取类型提示
@@ -9,7 +10,18 @@ const resolve = (dir: string) => path.join(__dirname, dir)
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [
+    vue(),
+    styleImport({
+     libs: [{
+      libraryName: 'ant-design-vue',
+      esModule: true,
+      resolveStyle: (name) => {
+       return `ant-design-vue/es/${name}/style/css`;
+      },
+     }]
+    })
+  ],
   resolve: {
     alias: {
       '@': resolve('src'),

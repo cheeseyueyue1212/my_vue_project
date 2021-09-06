@@ -1,17 +1,9 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
-
-const routes: Array<RouteRecordRaw> = [
-  {
-    path: '/home',
-    name: 'Home',
-    component: () => import(/* webpackChunkName: "Home" */ '@/views/home.vue')
-  },
-  { path: '/', redirect: { name: 'Home' } }
-]
+import { baseRoute } from './routes/index';
 
 const router = createRouter({
   history: createWebHashHistory(),
-  routes
+  routes: baseRoute as unknown as RouteRecordRaw[],
 })
 
 export default router

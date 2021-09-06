@@ -1,24 +1,28 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <config-provider :locale="locale">
+    <router-view />
+  </config-provider>
 </template>
 
 <script lang="ts">
 import { defineComponent, toRefs, reactive} from 'vue';
-import HelloWorld from './components/HelloWorld.vue'
+import zhCN from 'ant-design-vue/es/locale/zh_CN';
+import { ConfigProvider } from 'ant-design-vue';
 
 export default defineComponent({
   name: 'App',
   components: {
-    HelloWorld,
+    ConfigProvider,
   },
 
   setup() {
+    const locale = zhCN
     const state = reactive({
     });
 
     return {
       ...toRefs(state),
+      locale
     };
   },
 })
@@ -28,8 +32,7 @@ export default defineComponent({
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  height: 100%;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>

@@ -11,7 +11,9 @@
     "lint:lint-staged": "lint-staged -c ./.husky/lintstagedrc.js"
   },
   "dependencies": {
+    "@ant-design/icons": "^4.6.4",
     "axios": "^0.21.1",
+    "babel-plugin-import": "^1.13.3",
     "element-plus": "^1.1.0-beta.7",
     "less": "^4.1.1",
     "vue": "^3.2.6",
@@ -21,15 +23,18 @@
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
+    "@tencent/stylelint-config-tencent": "^1.0.7",
     "@types/lodash": "^4.14.172",
     "@types/node": "^16.7.6",
     "@typescript-eslint/eslint-plugin": "^4.30.0",
     "@typescript-eslint/parser": "^4.30.0",
     "@vitejs/plugin-vue": "^1.6.0",
     "@vue/compiler-sfc": "^3.0.5",
+    "ant-design-vue": "^2.2.6",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-define-config": "^1.0.8",
     "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^7.17.0",
@@ -38,8 +43,7 @@
     "prettier": "^2.3.2",
     "typescript": "^4.3.2",
     "vite": "^2.5.1",
-    "vue-tsc": "^0.2.2",
-    "eslint-define-config": "^1.0.8",
-    "@tencent/stylelint-config-tencent": "^1.0.7"
+    "vite-plugin-style-import": "^1.2.1",
+    "vue-tsc": "^0.2.2"
   }
 }
